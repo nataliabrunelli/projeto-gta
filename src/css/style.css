@@ -1,0 +1,233 @@
+body {
+  background-color: #282828;
+  color: #fff;
+}
+
+.cabecalho {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b0b0b;
+  padding: 0 80px;
+  border-bottom: 1px solid #282828;
+}
+
+.cabecalho .logo {
+  display: flex;
+  gap: 15px;
+}
+
+.cabecalho .menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  padding: 30px;
+  color: #e8e8e8;
+  font-family: "Chalet NewYork", sans-serif;
+}
+
+.menu a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.home {
+  display: flex;
+  position: relative;
+  min-height: calc(100vh - 80px);
+}
+
+/* O ::after cria um pseudo elemento; para criar o código do gradiente, ir em https://cssgradient.io/ */
+.home::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 65%
+  );
+}
+
+.home .imagem-fundo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home .informacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  min-height: calc(100vh - 80px);
+  gap: 32px;
+  padding: 80px 80px 80px 170px;
+  max-width: 780px;
+}
+
+.home .informacoes img {
+  max-width: 150px;
+}
+
+.home .informacoes .lista-jogos {
+  display: flex;
+  gap: 32px;
+}
+
+/* Para importar fonte externa baixada no pc, tem que criar um outro arquivo .css igual o arquivo "fonte.css" e depois liká-lo na <head> COM O CAMINHO CORRETO */
+.home .informacoes .titulo {
+  font-family: "ChaletComprime";
+  font-size: 55px;
+}
+
+.home .informacoes .texto {
+  font-family: "Chalet NewYork";
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.botao-comprar,
+.botao-plataforma {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid #fff;
+  border-radius: 4px;
+  font-family: "ChaletComprime";
+  font-size: 28px;
+  text-align: center;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.botao-comprar:hover {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease-in;
+}
+.comprar .capa-jogo {
+  width: 270px;
+}
+
+.comprar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+
+.comprar .titulo {
+  font-family: "ChaletComprime";
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.comprar .cartao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #000;
+  width: 70%;
+  border-radius: 4px;
+  padding: 80px;
+}
+
+.comprar .cartao .informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.comprar .informacoes h3 {
+  font-family: "ChaletComprime";
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.comprar .informacoes p {
+  color: #e8e8e8;
+  font-family: "Chalet NewYork";
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.botao-plataforma {
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+
+.comprar .informacoes .plataformas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.comprar .botao-plataforma .plataformas {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: none;
+  opacity: 0;
+}
+
+.comprar .botao-plataforma .plataformas.ativo {
+  display: flex;
+  opacity: 1;
+}
+
+.comprar .botao-plataforma .plataformas li {
+  padding: 20px;
+}
+
+.comprar .botao-plataforma .plataformas li:nth-child(1) {
+  border: 1px solid #00439c;
+}
+
+.comprar .botao-plataforma .plataformas li:nth-child(1):hover {
+  background-color: #00439c;
+  transition: all 0.3s ease-in;
+}
+.comprar .botao-plataforma .plataformas li:nth-child(2) {
+  border: 1px solid #387a26;
+}
+
+.comprar .botao-plataforma .plataformas li:nth-child(2):hover {
+  background-color: #387a26;
+  transition: all 0.3s ease-in;
+}
+
+.comprar .botao-plataforma .plataformas li:nth-child(3) {
+  border: 1px solid #00439c;
+}
+
+.comprar .botao-plataforma .plataformas li:nth-child(3):hover {
+  background-color: #00439c;
+  transition: all 0.3s ease-in;
+}
+
+.comprar .botao-plataforma .plataformas li:nth-child(4) {
+  border: 1px solid #387a26;
+}
+
+.comprar .botao-plataforma .plataformas li:nth-child(4):hover {
+  background-color: #387a26;
+  transition: all 0.3s ease-in;
+}
+.comprar .botao-plataforma .plataformas li:nth-child(5) {
+  border: 1px solid #fcaf17;
+}
+
+.comprar .botao-plataforma .plataformas li:nth-child(5):hover {
+  background-color: #fcaf17;
+  transition: all 0.3s ease-in;
+}
